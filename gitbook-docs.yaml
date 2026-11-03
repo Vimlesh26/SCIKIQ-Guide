@@ -1,0 +1,11 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: SCIKIQ-Guide
+  structure:
+    - type: space
+      key: space-1
+      title: SCIKIQ Docs
+      path: scikiq-docs
+      default: true
+      content:
+        directory: ./scikiq-docs
