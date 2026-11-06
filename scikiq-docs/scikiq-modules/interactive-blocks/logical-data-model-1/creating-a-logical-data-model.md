@@ -15,13 +15,13 @@ icon: page
 
 ### Overview
 
-Creating a **Logical Data Model** involves identifying the data required by an organization and organizing it into **entities, attributes, and relationships**. It begins by understanding the **business requirements and processes** to determine what data is needed and how it is connected. The model is then reviewed to ensure it is **accurate, consistent, complete, and aligned with business needs**. It serves as a **blueprint for designing the physical database**..
+This page describes how to create a logical data model. Creating a **Logical Data Model** helps organize business data into a clear and structured format. It provides a systematic way to identify entities, define their attributes, and establish relationships between them.
 
 ***
 
 ### Procedure
 
-The procedure of creating a logical data model involves a series of steps. These include **Adding Tables to the Logical Data Model, Customizing and Managing Tables, Defining Relationship, Auto Arranging Layout,** and **Saving LDM**.
+The process of creating a logical data model involves a series of steps. These steps include **Adding Tables to the Logical Data Model, Customizing and Managing Tables, Defining Relationship, Auto Arranging Layout,** and **Saving LDM**.
 
 Click on the below tabs to view step-by-step instructions:
 
@@ -29,11 +29,11 @@ Click on the below tabs to view step-by-step instructions:
 {% tab title="Adding Tables to the Logical Data Model" %}
 **Overview**
 
-While creating a table, the first step is to **select the required data source/asset and then choose the appropriate connection**. From the list of available tables, **drag and drop the required tables onto the application canvas**.
-
-This allows you to **visually build and organize the data model**. Each table represents an **entity**, and arranging the tables on the canvas provides a clear visual representation of **what data exists, how it is structured, and how different data elements are related and connected**.
+**Adding tables** helps break down business information into smaller, organized structures. Each table represents a business entity, its columns define the required attributes, and relationships connect the tables to represent how business data is associated.
 
 **Procedure**
+
+While creating a table, the first step is to **select the required data source/asset and then choose the appropriate connection**. From the list of available tables, **drag and drop the required tables onto the application canvas**.
 
 The below step-by-step instructions help you understand how to add tables to the logical data model:
 
@@ -49,15 +49,17 @@ The **Logical Data Model** page is displayed.
 
 A. From the **Select Source Type** drop-down box, select either **Datasource** or **Assets**. For example, Datasource.
 
-B. From the **Select Connection** drop-down box, select the required **connection**.
+B. From the **Source Category** drop-down box, select the required  category choosing from **RDBMS, Big Query, File Storage, Glue,** or **File Upload (CSV/Excel).**
+
+C. From the **Select Connection** drop-down box, select the required **connection**.
 
 The **Table List** is displayed.
 
 3. From the **Table List,** drag the required **tables** onto to the **right pane (Canvas)**.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (2705).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3222).png" alt=""><figcaption></figcaption></figure>
 
-4. Next, click [**Customizing and Managing Tables**](creating-a-logical-data-model.md#customizing-and-managing-tables)**.**
+3. Next, click [**Customizing and Managing Tables**](creating-a-logical-data-model.md#customizing-and-managing-tables)**.**
 {% endtab %}
 
 {% tab title="Customizing and Managing Tables" %}
@@ -210,13 +212,51 @@ The **Data Preview** screen is displayed.
 {% tab title="Defining Relationship" %}
 **Overview**
 
-Defining a relationship connects related source and target tables. As part of defining relationships, you need to specify one table as the **source table** and another table as the **target table**. You can repeat this process to define relationships between all relevant tables in the Logical Data Model. For example, one table can be designated as the **source table**, while the other related tables can be defined as **target tables**.&#x20;
+**Defining relationships** helps establish how different tables are connected and how data is associated across them. It provides a clear understanding of the connections between business entities and ensures that the data model accurately represents business requirements.
 
-While defining each relationship, you can also specify the **relationship type**, choosing from **One-to-One, One-to-Many, Many-to-One, or Many-to-Many**, based on how the records in the two tables are related.
+**Procedure**
+
+As part of defining a relationship between tables, you need to select one table as the source table and another as the target table. You need to repeat this process to establish relationships between all relevant tables in the Logical Data Model.
+
+While defining a relationship between tables, you can also specify it as either **Active** or **Inactive**. Additionally, you can use the **Cross-Filter Direction** feature to specify the data flow between the tables.
+
+{% hint style="info" %}
+#### Tip: Description of  **Active Relationship, Inactive Relationship, and Cross-Filter Direction**
+
+**1. Active Relationship:** Charts use active relationships by default to connect related tables and retrieve data.
+
+**2. Inactive Relationship:** Use an inactive relationship when the same table needs to serve different roles or when multiple relationship paths exist between the same tables.
+
+**When to use an Inactive Relationship:**
+
+The following examples illustrate when an inactive relationship is useful:
+
+* **One Table Serving Two Roles:** A Sales table may contain both Order Date and Ship Date, with both columns connected to the Date table. In this case, keep the Order Date relationship active and the Ship Date relationship inactive.
+* **Multiple Paths Between Tables:** Sales data may be connected to a Store table through two different paths: directly through the store where the sale occurred and indirectly through the salesperson's home store. In this case, keep the direct relationship active and the alternative relationship inactive.
+
+**3. Cross-Filter Direction:**
+
+* Single: Filters flow from the One side to the Many side.
+* Both: Filters flow in both directions between the related tables.
+{% endhint %}
+
+For each relationship, you need to specify the **relationship type** based on how records in the two tables are associated. The available relationship types are **One-to-One, One-to-Many, Many-to-One, and Many-to-Many**.
+
+Expand the below table to view step-by-step instructions for each of the relationship type.
+
+<details>
+
+<summary><strong>Defining</strong> <strong>One-to-One Relationship Type</strong></summary>
+
+**Overview**
+
+Select the **One-to-One** option if you want one record in one table is associated with only one record in another table, and vice versa.&#x20;
 
 > <mark style="color:red;">**Note:**</mark>&#x20;
 >
-> Defining a relationship connects related source and target tables, while defining the relationship type specifies how their records are associated. This enables the Logical Data Model to represent business relationships accurately and allows related data to be combined and consumed correctly for reporting, analytics, and other downstream use cases.
+> * One-to-One relationship always filter both ways.
+> * When **One-to-One** is selected as the relationship type, the **Both** option is automatically selected in the **Cross Filter** drop-down list, located below the Relationship drop-down list.
+> * You can also make when one table plays two roles for another by using the **Inactive** option.
 
 **Procedure**
 
@@ -226,7 +266,7 @@ The selected table is highlighted with a blue border on its top.
 
 2. Next, on the **Top Menu**, click the **Relationship** button.
 
-<figure><img src="../../../.gitbook/assets/image (2725).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3223).png" alt=""><figcaption></figcaption></figure>
 
 The **Define Relationship LDM** screen is displayed.
 
@@ -236,36 +276,217 @@ A. In the **Source** section, select the **Source Table** and **Columns**.
 
 B. In the **Target** section, select the **Target Table** and **Columns**.
 
-C. From the **Relationship** drop-down box, select the **relationship** choosing from **One-to-One, One-to-Many, Many-to-One,** and **Many-to-Many.** See the below table for the description of these relationships:
-
-<table><thead><tr><th width="139.4444580078125" valign="top">Relationship</th><th valign="top">Description</th></tr></thead><tbody><tr><td valign="top">One-to-One</td><td valign="top">A <strong>One-to-One relationship</strong> means that one record in one table is associated with only one record in another table, and vice versa.</td></tr><tr><td valign="top">One-to-Many</td><td valign="top">A <strong>One-to-Many relationship</strong> means that one record in the first table can be associated with multiple records in the second table, while each record in the second table is associated with one record in the first table.</td></tr><tr><td valign="top">Many-to-One</td><td valign="top">A <strong>Many-to-One relationship</strong> is essentially the reverse direction of a One-to-Many relationship. It means that many records in the first table can be associated with one record in the second table.</td></tr><tr><td valign="top">Many-to-Many</td><td valign="top">A <strong>Many-to-Many relationship</strong> means that multiple records in one table can be associated with multiple records in another table.</td></tr></tbody></table>
+C. From the **Relationship** drop-down box, select **One-to-One.**&#x20;
 
 D. Once completed, click the **Save** button.
 
-<figure><img src="../../../.gitbook/assets/image (2722).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3199).png" alt=""><figcaption></figcaption></figure>
 
-4. Now, click the other **required table**, and then click the **Relationship** button on the **Top Menu** again.
+The source and target tables are connected. See the below image.
 
-<figure><img src="../../../.gitbook/assets/image (2723).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3200).png" alt=""><figcaption></figcaption></figure>
+
+4. Once connected, click the **Relationship** button again.
+
+The **Relations Properties** screen is displayed with the **Status** option displayed as Active by default.
+
+5. I**f you want to make when one table plays two roles for another, or when two paths lead between the same tables**, then disable the **Status** option.
+
+<figure><img src="../../../.gitbook/assets/image (3201).png" alt=""><figcaption></figcaption></figure>
+
+The relationship is marked as **Inactive** and represented by **dotted arrows** between the tables.
+
+<figure><img src="../../../.gitbook/assets/image (3202).png" alt=""><figcaption></figcaption></figure>
+
+
+
+</details>
+
+<details>
+
+<summary><strong>Defining</strong> <strong>One-to-Many Relationship Type</strong></summary>
+
+**Overview**
+
+Select the **One-to-Many** option if you want one record in the first table is associated with multiple records in the second table and each record in the second table is associated with one record in the first table.&#x20;
+
+> <mark style="color:red;">**Note:**</mark> If you want to filter both ways, then select the **Both** option from the **Cross-Filter** drop-down box, located below the Relationship drop-down list.
+
+**Procedure**
+
+1. On the **Top Menu** of **Logical Data Model** page, click the **Relationship** button.
 
 The **Relationship Properties** screen is displayed.
 
-5. On the **Relationship Properties** screen, click the **Add Relationship** button.
+2. On the **Relationship Properties** screen, click the Add Relationship button.
 
-<figure><img src="../../../.gitbook/assets/image (2727).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3203).png" alt=""><figcaption></figcaption></figure>
 
 The **Define Relationship LDM** screen is displayed.
 
-6. On the **Define Relationship LDM** screen:
+3. On the **Define Relationship LDM** screen (See the below image):
 
-A. Select the **Source Table** and **Columns,** and **Target Table** and **Columns**.
+A. In the **Source** section, select the **Source Table** and **Columns**.
 
-B. From the **Relationship** drop-down box, select the **relationship** choosing from **One-to-One, One-to-Many, Many-to-One,** and **Many-to-Many.**
+B. In the **Target** section, select the **Target Table** and **Columns**.
 
-C. Once completed, click the **Save** button.
+C. From the **Relationship** drop-down box, select **One-to-Many**&#x20;
 
-7. Select the **other tables**, and apply the same above mentioned procedure.
-8. Next, click [**Auto Arranging Layout**](creating-a-logical-data-model.md#auto-arranging-layout)**.**
+D. From the **Cross-Filter Direction** drop-down box, select either **Single** or **Both**.
+
+> <mark style="color:red;">**Note:**</mark>&#x20;
+>
+> * **Single**: Selecting the Single option allows the Source table to filter the Target table.
+> * **Both:** Selecting the Both option allows the Source and Target tables to filter each other in both directions.
+
+E. Once completed, click the **Save** button.
+
+<figure><img src="../../../.gitbook/assets/image (3199).png" alt=""><figcaption></figcaption></figure>
+
+The source and target tables are connected. See the below image.
+
+<figure><img src="../../../.gitbook/assets/image (3204).png" alt=""><figcaption></figcaption></figure>
+
+4. I**f you want to make when one table plays two roles for another, or when two paths lead between the same tables**,  then:
+
+A. Click the **Relationship** button again.
+
+The **Relations Properties** screen is displayed with the **Status** option displayed as **Active** by default.
+
+B. On the the **Relations Properties** screen, disable the **Status** option.
+
+<figure><img src="../../../.gitbook/assets/image (3205).png" alt=""><figcaption></figcaption></figure>
+
+The relationship is marked as **Inactive** and represented by **dotted arrows** between the tables.
+
+<figure><img src="../../../.gitbook/assets/image (3206).png" alt=""><figcaption></figcaption></figure>
+
+
+
+</details>
+
+<details>
+
+<summary><strong>Defining Many-to-One Relationship Type</strong></summary>
+
+**Overview**
+
+Select the **One-to-Many** option if you want one record in the first table is associated with multiple records in the second table and each record in the second table is associated with one record in the first table.&#x20;
+
+Select the **Many-to-One relationship** if you want many records in the first table can be associated with one record in the second table.
+
+> <mark style="color:red;">**Note:**</mark> If you want to filter both ways, then select the **Both** option from the **Cross-Filter** drop-down box, located below the Relationship drop-down list.
+
+**Procedure**
+
+1. On the **Relationship Properties** screen, click the **Add Relationship** button.
+
+<figure><img src="../../../.gitbook/assets/image (3207).png" alt=""><figcaption></figcaption></figure>
+
+The **Define Relationship LDM** screen is displayed.
+
+3. On the **Define Relationship LDM** screen (See the below image):
+
+A. In the **Source** section, select the **Source Table** and **Columns**.
+
+B. In the **Target** section, select the **Target Table** and **Columns**.
+
+C. From the **Relationship** drop-down box, select **One-to-Many**&#x20;
+
+D. From the **Cross-Filter Direction** drop-down box, select either **Single** or **Both**.
+
+> <mark style="color:red;">**Note:**</mark>&#x20;
+>
+> * **Single**: Selecting the Single option allows the Source table to filter the Target table.
+> * **Both:** Selecting the Both option allows the Source and Target tables to filter each other in both directions.
+
+E. Once completed, click the **Save** button.
+
+<figure><img src="../../../.gitbook/assets/image (3208).png" alt=""><figcaption></figcaption></figure>
+
+The source and target tables are connected. See the below image.
+
+<figure><img src="../../../.gitbook/assets/image (3209).png" alt=""><figcaption></figcaption></figure>
+
+4. I**f you want to make when one table plays two roles for another, or when two paths lead between the same tables**,  then:
+
+A. Click the **Relationship** button again.
+
+The **Relations Properties** screen is displayed with the **Status** option displayed as **Active** by default.
+
+B. On the the **Relations Properties** screen, disable the **Status** option.
+
+<figure><img src="../../../.gitbook/assets/image (3210).png" alt=""><figcaption></figcaption></figure>
+
+The relationship is marked as **Inactive** and represented by **dotted arrows** between the tables.
+
+<figure><img src="../../../.gitbook/assets/image (3211).png" alt=""><figcaption></figcaption></figure>
+
+
+
+</details>
+
+<details>
+
+<summary><strong>Defining Many-to-Many Relationship Type</strong></summary>
+
+**Overview**
+
+Select the **Many-to-Many** option if you want multiple records in one table can be associated with multiple records in another table.
+
+> <mark style="color:red;">**Note:**</mark>
+>
+> * Many-to-Many relationship always filter both ways.
+> * When **Many-to-Many** is selected as the relationship type, the **Both** option is automatically selected in the **Cross Filter** drop-down list, located below the Relationship drop-down list.
+
+**Procedure**
+
+1. On the **Relationship Properties** screen, click the **Add Relationship** button.
+
+<figure><img src="../../../.gitbook/assets/image (3212).png" alt=""><figcaption></figcaption></figure>
+
+The **Define Relationship LDM** screen is displayed.
+
+3. On the **Define Relationship LDM** screen (See the below image):
+
+A. In the **Source** section, select the **Source Table** and **Columns**.
+
+B. In the **Target** section, select the **Target Table** and **Columns**.
+
+C. From the **Relationship** drop-down box, select **Many-to-Many.**&#x20;
+
+D. From the **Cross-Filter Direction** drop-down box, select either **Single** or **Both**.
+
+> <mark style="color:red;">**Note:**</mark>&#x20;
+>
+> * **Single**: Selecting the Single option allows the Source table to filter the Target table.
+> * **Both:** Selecting the Both option allows the Source and Target tables to filter each other in both directions.
+
+E. Once completed, click the **Save** button.
+
+<figure><img src="../../../.gitbook/assets/image (3213).png" alt=""><figcaption></figcaption></figure>
+
+The source and target tables are connected. See the below image.
+
+<figure><img src="../../../.gitbook/assets/image (3214).png" alt=""><figcaption></figcaption></figure>
+
+4. I**f you want to make when one table plays two roles for another, or when two paths lead between the same tables**,  then:
+
+A. Click the **Relationship** button again.
+
+The **Relations Properties** screen is displayed with the **Status** option displayed as **Active** by default.
+
+B. On the the **Relations Properties** screen, disable the **Status** option.
+
+<figure><img src="../../../.gitbook/assets/image (3215).png" alt=""><figcaption></figcaption></figure>
+
+The relationship is marked as **Inactive** and represented by **dotted arrows** between the tables.
+
+<figure><img src="../../../.gitbook/assets/image (3216).png" alt=""><figcaption></figcaption></figure>
+
+
+
+</details>
 {% endtab %}
 
 {% tab title="Auto Arranging Layout" %}
@@ -277,17 +498,17 @@ C. Once completed, click the **Save** button.
 
 1. On the **Top Menu** of **Logical Data Model**, click the **Auto Arrange** button.
 
-<figure><img src="../../../.gitbook/assets/image (2729).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3217).png" alt=""><figcaption></figcaption></figure>
 
 The Auto Arrange message box is displayed.
 
 2. On the **Auto Arrange** message box, click the **Yes** button.
 
-<figure><img src="../../../.gitbook/assets/image (2733).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3218).png" alt=""><figcaption></figcaption></figure>
 
 The layout is auto arranged.
 
-<figure><img src="../../../.gitbook/assets/image (2732).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3219).png" alt=""><figcaption></figcaption></figure>
 
 3. Next, click [**Saving LDM**](creating-a-logical-data-model.md#saving-ldm)**.**
 {% endtab %}
@@ -295,35 +516,57 @@ The layout is auto arranged.
 {% tab title="Saving LDM" %}
 **Overview**
 
-**Saving the LDM** details ensures that the logical data model and its configurations are preserved, allowing you to retain your work, review it, make further changes, and reuse the model without having to recreate it.
+**Saving a Logical Data Model (LDM)** details ensures that the logical data model and its configurations are preserved, allowing you to retain your work, review it, make further changes, and reuse the model without having to recreate it.
 
 **Procedure**
 
+The process of saving a Logical Data Model (LDM) involves three main steps: **Adding Metadata, Adding Governance Details, and Reviewing and Submitting** the model.
+
+Follow the steps below to complete the saving process:
+
+_**To save a LDM**_
+
+{% stepper %}
+{% step %}
+**Adding Metadata**
+
 1. On the **Top Menu** right corner, click the **Save** button.
 
-<figure><img src="../../../.gitbook/assets/image (2734).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3220).png" alt=""><figcaption></figcaption></figure>
 
-The **Save LDM** dialogue box is displayed.
+The **Save LDM** dialogue box displayed.
 
 2. On the **Save LDM** dialogue box:
 
-A. On the **Add Metadata** tab, specify all the required details, and click the **Next** button.
+A. in the **Add Metadata** tab, specify all the required details.
+
+> <mark style="color:red;">**Note:**</mark> If required, you can modify the **Business Name** as required.
+
+B. Click the **Next** button.
 
 The **Add Governance** tab is opened.
+{% endstep %}
 
-B. On the **Add Governance** tab, specify the **Business Owner, Technical Owner**, and then click the **Next** button.
+{% step %}
+**Adding Governance Details**
+
+* On the **Add Governance** tab, specify the **Business Owner, Technical Owner**, and then click the **Next** button.
 
 The **Review & Submit** tab is opened.
+{% endstep %}
 
-3. On the **Review & Submit** tab, enter name and description for the LDM, and then click the Finish **button**.
+{% step %}
+**Reviewing and Submitting the Model**
+
+* On the **Review & Submit** tab, enter name and description for the LDM, and then click the Finish **button**.
 
 <figure><img src="../../../.gitbook/assets/image (2735).png" alt=""><figcaption></figcaption></figure>
 
 The logical data model is created and displayed on the **Business Data Models** page.
+{% endstep %}
+{% endstepper %}
 {% endtab %}
 {% endtabs %}
-
-***
 
 ### Related Topics
 
