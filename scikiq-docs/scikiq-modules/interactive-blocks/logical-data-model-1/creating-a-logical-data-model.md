@@ -23,6 +23,12 @@ This page describes how to create a logical data model. Creating a **Logical Dat
 
 The process of creating a logical data model involves a series of steps. These steps include **Adding Tables to the Logical Data Model, Customizing and Managing Tables, Defining Relationship, Auto Arranging Layout,** and **Saving LDM**.
 
+> <mark style="color:red;">**Note:**</mark> Note: You can create a Logical Data Model (LDM) using either a **single connection or multiple** connections.&#x20;
+>
+> **The creation process is the same in both cases.**&#x20;
+>
+> Using multiple connections allows you to include tables from different databases in a single logical model, establish relationships between them, and create a unified view of business data across different systems.
+
 Click on the below tabs to view step-by-step instructions:
 
 {% tabs %}
@@ -52,6 +58,8 @@ A. From the **Select Source Type** drop-down box, select either **Datasource** o
 B. From the **Source Category** drop-down box, select the required  category choosing from **RDBMS, Big Query, File Storage, Glue,** or **File Upload (CSV/Excel).**
 
 C. From the **Select Connection** drop-down box, select the required **connection**.
+
+> <mark style="color:red;">**Note:**</mark> To create a Logical Data Model using multiple connections, select the required connections from the same or different data sources. You can select one or more source categories and choose the required connections from each category.
 
 The **Table List** is displayed.
 
