@@ -2,7 +2,7 @@
 icon: page
 ---
 
-# Creating a Logical Data Model
+# Creating a Logical Data Model Using a Single Connection
 
 ***
 
@@ -15,7 +15,7 @@ icon: page
 
 ### Overview
 
-This page describes how to create a logical data model. Creating a **Logical Data Model** helps organize business data into a clear and structured format. It provides a systematic way to identify entities, define their attributes, and establish relationships between them.
+This page describes how to create a logical data model using a single connection. **Creating a Logical Data Model** using a single connection helps organize tables from one database, define relationships between them, and create a structured representation of the business data.
 
 ***
 
@@ -67,7 +67,7 @@ The **Table List** is displayed.
 
 <figure><img src="../../../.gitbook/assets/image (3222).png" alt=""><figcaption></figcaption></figure>
 
-3. Next, click [**Customizing and Managing Tables**](creating-a-logical-data-model.md#customizing-and-managing-tables)**.**
+3. Next, click [**Customizing and Managing Tables**](creating-a-logical-data-model-using-a-single-connection.md#customizing-and-managing-tables)**.**
 {% endtab %}
 
 {% tab title="Customizing and Managing Tables" %}
@@ -212,7 +212,7 @@ The **Data Preview** screen is displayed.
 
 <figure><img src="../../../.gitbook/assets/image (2736).png" alt=""><figcaption></figcaption></figure>
 
-3. Next, click [**Defining Relationship**](creating-a-logical-data-model.md#defining-relationship)**.**
+3. Next, click [**Defining Relationship**](creating-a-logical-data-model-using-a-single-connection.md#defining-relationship)**.**
 {% endstep %}
 {% endstepper %}
 {% endtab %}
@@ -276,9 +276,9 @@ The selected table is highlighted with a blue border on its top.
 
 <figure><img src="../../../.gitbook/assets/image (3223).png" alt=""><figcaption></figcaption></figure>
 
-The **Define Relationship LDM** screen is displayed.
+The **Define Relationship LDM** drop-down box is displayed.
 
-3. On the **Define Relationship LDM** screen (See the below image):
+3. On the **Define Relationship LDM** drop-down box (See the below image):
 
 A. In the **Source** section, select the **Source Table** and **Columns**.
 
@@ -326,7 +326,7 @@ Select the **One-to-Many** option if you want one record in the first table is a
 
 The **Relationship Properties** screen is displayed.
 
-2. On the **Relationship Properties** screen, click the Add Relationship button.
+2. On the **Relationship Properties** screen, click the **Add Relationship** button.
 
 <figure><img src="../../../.gitbook/assets/image (3203).png" alt=""><figcaption></figcaption></figure>
 
@@ -518,7 +518,7 @@ The layout is auto arranged.
 
 <figure><img src="../../../.gitbook/assets/image (3219).png" alt=""><figcaption></figcaption></figure>
 
-3. Next, click [**Saving LDM**](creating-a-logical-data-model.md#saving-ldm)**.**
+3. Next, click [**Saving LDM**](creating-a-logical-data-model-using-a-single-connection.md#saving-ldm)**.**
 {% endtab %}
 
 {% tab title="Saving LDM" %}

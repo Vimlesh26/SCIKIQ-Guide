@@ -77,5 +77,5 @@ The below information describes the need and Importance of a logical data mode**
 
 ### Related Topics
 
-* [**Creating a Logical Data Model**](creating-a-logical-data-model.md)
+* [**Creating a Logical Data Model**](creating-a-logical-data-model-using-a-single-connection.md)
 * [**Managing Logical Data Models**](managing-logical-data-models.md)

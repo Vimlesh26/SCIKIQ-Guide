@@ -531,7 +531,7 @@ The LDM is deleted.
 
 ### Related Topics
 
-* [**Creating a Logical Data Model**](creating-a-logical-data-model.md)
+* [**Creating a Logical Data Model**](creating-a-logical-data-model-using-a-single-connection.md)
 
 [^1]: Token Name identifies the access token
 
