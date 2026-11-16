@@ -122,6 +122,12 @@ The following table lists common error messages and issues, their possible cause
 
 The following three example use cases demonstrate how to create Logical Data Models (LDMs) using multiple data connections and different data sources.
 
+These use cases are:
+
+* [**Using Two Database Connections in a Single Model**](creating-a-logical-data-model-using-multiple-connections.md#using-two-database-connections-in-a-single-model)
+* [**Adding an Uploaded File from S3**](creating-a-logical-data-model-using-multiple-connections.md#adding-an-uploaded-file-from-s3)
+* [**Joining a SharePoint File with a Database Table**](creating-a-logical-data-model-using-multiple-connections.md#joining-a-sharepoint-file-with-a-database-table)
+
 Each use case covers a specific scenario and provides step-by-step instructions for adding the required data sources, defining relationships, and creating the Logical Data Model.
 
 Click the tabs below to view the individual use cases and their corresponding step-by-step instructions.
