@@ -23,11 +23,11 @@ Calculated fields help dashboard designers transform raw data into meaningful bu
 
 ### Using Calculated Fields
 
-This section explains how to use calculated fields, covering key concepts and function categories available in SCIKIQ. The concepts include **Arguments, Data Types, Blanks, and Syntax**. The function categories include **Aggregation and Statistics, Math, Logical and Comparison, Text, Date and Time, Time Intelligence, Filter and Context, Information and Type Conversion, and Parameter Tables**.
+This section explains how to use calculated fields, covering key concepts and function categories available in SCIKIQ. The concepts include [**Arguments**](using-calculated-fields.md#arguments)**,** [**Data Types**](using-calculated-fields.md#data-types)**,** [**Blanks**](using-calculated-fields.md#blanks)**, and** [**Syntax**](using-calculated-fields.md#syntax). The function categories include [**Aggregation and Statistics**](using-calculated-fields.md#aggregation-and-statistics)**,** [**Math**](using-calculated-fields.md#math)**,** [**Logical and Comparison**](using-calculated-fields.md#logical-and-comparison)**,** [**Text**](using-calculated-fields.md#text)**,** [**Date and Time**](using-calculated-fields.md#date-and-time)**,** [**Time Intelligence**](using-calculated-fields.md#time-intelligence)**,** [**Filter and Context**](using-calculated-fields.md#filter-and-context)**,** [**Information and Type Conversion**](using-calculated-fields.md#information-and-type-conversion)**, and** [**Parameter Table**](using-calculated-fields.md#parameter-table).
 
-Practical examples demonstrate how to apply calculated fields through scenarios such as **data grouping, gross margin calculation, share of total, filtered measures, date calculations, KPI creation,** and **parameter tables.**
+Practical examples demonstrate how to apply calculated fields through scenarios such as [**Data grouping**](using-calculated-fields.md#id-1-creating-a-new-data-grouping)**,** [**Gross margin calculation**](using-calculated-fields.md#id-2-calculating-gross-margin-percentage-by-region)**,** [**Share of total, Filtered measures**](using-calculated-fields.md#id-3-calculating-share-of-total-filtered-measures-and-average-order-value)**,** [**Date calculations**](using-calculated-fields.md#id-4-working-with-date-calculations)**,** [**KPI creation**](using-calculated-fields.md#id-5-creating-a-kpi-dashboard-with-mtd-ytd-previous-month-and-year-metrics)**,** and [**Parameter tables**](using-calculated-fields.md#id-7-working-with-parameter-tables)**.**
 
-The section also covers dashboard best practices and performance considerations.
+The section also covers [**Key aspects of dashboard design.**](using-calculated-fields.md#key-aspects-of-dashboard-design)
 
 {% tabs %}
 {% tab title="Functions" %}
