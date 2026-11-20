@@ -229,6 +229,7 @@
     * [Copy of Creating Dashboard](scikiq-modules/openapi/dashboard-designer/copy-of-creating-dashboard.md)
     * [Visualization Charts Overview](scikiq-modules/openapi/dashboard-designer/visualization-charts-overview.md)
     * [Adding Visualization Charts](scikiq-modules/openapi/dashboard-designer/adding-visualization-charts.md)
+    * [Using Calculated Fields](scikiq-modules/openapi/dashboard-designer/using-calculated-fields.md)
     * [Managing Dashboard](scikiq-modules/openapi/dashboard-designer/managing-dashboard/README.md)
       * [View Dashboard](scikiq-modules/openapi/dashboard-designer/managing-dashboard/view-dashboard.md)
       * [Update Dashboard](scikiq-modules/openapi/dashboard-designer/managing-dashboard/update-dashboard.md)
